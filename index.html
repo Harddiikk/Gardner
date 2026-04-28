@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Gardner Business Media – Manufacturing's Leading Information Resource</title>
+<meta name="description" content="Gardner Business Media provides media solutions to industrial manufacturing markets. We help you build brand + increase business."/>
+<link rel="shortcut icon" href="https://gardnerweb.com/favicon.ico?v=06.18.21"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet"/>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Roboto',Arial,sans-serif;color:#222;background:#fff;overflow-x:hidden}
+a{text-decoration:none;color:inherit}
+img{max-width:100%;height:auto}
+
+/* === NAV === */
+.gw-nav{position:sticky;top:0;z-index:1000;background:#333;padding:0 32px;height:56px;display:flex;align-items:center;justify-content:space-between}
+.gw-nav-logo img{height:40px}
+.gw-nav-links{display:flex;gap:28px;align-items:center}
+.gw-nav-links a{font-family:'Oswald',sans-serif;font-size:13px;font-weight:500;color:#fff;text-transform:uppercase;letter-spacing:.5px;transition:color .2s}
+.gw-nav-links a:hover{color:#c8102e}
+.gw-nav-hamburger{color:#fff;font-size:20px;cursor:pointer;display:none}
+
+/* === HERO === */
+.gw-hero{position:relative;min-height:520px;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.gw-hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.gw-hero::after{content:'';position:absolute;inset:0;background:rgba(0,0,0,.35);z-index:1}
+.gw-hero-content{position:relative;z-index:2;max-width:800px;padding:60px 24px}
+.gw-hero h1{font-family:'Oswald',sans-serif;font-size:42px;font-weight:500;font-style:italic;line-height:1.2;margin-bottom:16px}
+.gw-hero h3{font-family:'Oswald',sans-serif;font-size:22px;font-weight:400;font-style:italic;margin-bottom:32px;opacity:.9}
+.btn-white{display:inline-block;padding:12px 48px;border:2px solid #fff;color:#fff;font-family:'Oswald',sans-serif;font-size:16px;font-weight:500;text-transform:uppercase;letter-spacing:1px;transition:all .2s}
+.btn-white:hover{background:#fff;color:#333}
+
+/* === GRADIENT DIVIDER === */
+.gw-divider{height:6px;background:linear-gradient(90deg,#c8102e 0%,#1a3a5c 50%,#2a7886 100%)}
+
+/* === BRANDS === */
+.gw-brands{padding:60px 24px;max-width:1100px;margin:0 auto;text-align:center;position:relative}
+.gw-brands h2{font-family:'Oswald',sans-serif;font-size:36px;font-weight:500;font-style:italic;color:#222;margin-bottom:12px}
+.gw-brands>p{font-size:16px;color:#555;max-width:700px;margin:0 auto 40px;line-height:1.7}
+.brand-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.brand-card{display:flex;border-top:3px solid #eee;overflow:hidden;transition:box-shadow .3s}
+.brand-card:hover{box-shadow:0 4px 20px rgba(0,0,0,.1)}
+.brand-logo{flex:0 0 40%;display:flex;align-items:center;justify-content:center;padding:16px;background:#fff}
+.brand-logo img{max-width:140px;max-height:80px}
+.brand-img{flex:0 0 60%}
+.brand-img img{width:100%;height:100%;object-fit:cover;min-height:120px}
+
+/* === AUDIENCE === */
+.gw-audience{position:relative;background:#1a3a5c;color:#fff;padding:80px 24px 60px;text-align:center}
+.gw-audience::before{content:'';position:absolute;inset:0;background:url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='0.04'%3E%3Cpath d='M20 20h20v20H20z'/%3E%3C/g%3E%3C/svg%3E");pointer-events:none}
+.gw-audience h2{font-family:'Oswald',sans-serif;font-size:36px;font-weight:500;font-style:italic;margin-bottom:12px;position:relative}
+.gw-audience>h3{font-size:16px;font-weight:400;opacity:.85;max-width:600px;margin:0 auto 40px;line-height:1.6;position:relative}
+.stats-card{background:#fff;color:#222;border-radius:4px;padding:40px 20px;max-width:1000px;margin:0 auto 32px;display:flex;justify-content:space-around;flex-wrap:wrap;gap:24px;position:relative;box-shadow:0 8px 40px rgba(0,0,0,.2)}
+.stat-item{text-align:center;min-width:140px}
+.stat-icon{font-size:36px;margin-bottom:8px;color:#1a3a5c}
+.stat-num{font-family:'Oswald',sans-serif;font-size:28px;font-weight:700;color:#222}
+.stat-label{font-size:13px;color:#666;font-style:italic;margin-top:4px}
+.btn-teal{display:inline-block;padding:14px 80px;background:#2a7886;color:#fff;font-family:'Oswald',sans-serif;font-size:16px;text-transform:uppercase;letter-spacing:1px;transition:background .2s;position:relative}
+.btn-teal:hover{background:#1f5f6b}
+
+/* === SOLUTIONS === */
+.gw-solutions{background:#f4e8e8;padding:60px 24px;text-align:center}
+.gw-solutions h2{font-family:'Oswald',sans-serif;font-size:36px;font-weight:500;font-style:italic;color:#222;margin-bottom:12px}
+.gw-solutions>p{font-size:16px;color:#555;max-width:650px;margin:0 auto 40px;line-height:1.7}
+.solutions-grid{display:flex;flex-wrap:wrap;justify-content:center;gap:24px;max-width:900px;margin:0 auto}
+.sol-item{display:flex;flex-direction:column;align-items:center;width:120px}
+.sol-icon{width:72px;height:72px;border-radius:50%;background:#c8102e;display:flex;align-items:center;justify-content:center;font-size:28px;color:#fff;margin-bottom:8px;box-shadow:0 4px 12px rgba(200,16,46,.3)}
+.sol-label{font-size:11px;font-weight:700;text-transform:uppercase;color:#333;text-align:center;line-height:1.3}
+
+/* === CTA === */
+.gw-cta{background:#c8102e;padding:60px 24px;display:flex;align-items:center;justify-content:center;gap:60px;flex-wrap:wrap;color:#fff}
+.gw-cta h2{font-family:'Oswald',sans-serif;font-size:48px;font-weight:700;font-style:italic}
+.gw-cta-right{text-align:center}
+.gw-cta h3{font-size:18px;font-weight:400;margin-bottom:20px;max-width:360px}
+.btn-outline-w{display:inline-block;padding:12px 40px;border:2px solid #fff;color:#fff;font-family:'Oswald',sans-serif;font-size:15px;text-transform:uppercase;letter-spacing:1px;transition:all .2s}
+.btn-outline-w:hover{background:#fff;color:#c8102e}
+
+/* === TESTIMONIAL === */
+.gw-testimonial{background:#0f1e2e;color:#fff;padding:60px 24px}
+.gw-testimonial .inner{max-width:1000px;margin:0 auto;display:flex;align-items:center;gap:40px;flex-wrap:wrap}
+.gw-testimonial blockquote{flex:1;min-width:280px;font-size:16px;line-height:1.8;font-style:italic;color:rgba(255,255,255,.9)}
+.gw-testimonial .author{font-weight:700;font-style:normal;margin-top:16px;color:#fff}
+.gw-testimonial .photo{flex:0 0 260px}
+.gw-testimonial .photo img{width:100%;border-radius:4px}
+
+/* === NEWSLETTER === */
+.gw-newsletter{background:#2a7886;padding:40px 24px;color:#fff;text-align:center}
+.gw-newsletter h2{font-family:'Oswald',sans-serif;font-size:28px;font-weight:500;margin-bottom:8px}
+.gw-newsletter p{font-size:15px;opacity:.9;margin-bottom:16px}
+.btn-primary-gw{display:inline-block;padding:10px 32px;background:#fff;color:#2a7886;font-family:'Oswald',sans-serif;font-size:14px;font-weight:700;text-transform:uppercase;letter-spacing:1px;transition:all .2s;border-radius:2px}
+.btn-primary-gw:hover{background:#e8e8e8}
+
+/* === FOOTER === */
+.gw-footer{background:#fff;border-top:2px solid #eee;padding:40px 24px}
+.gw-footer .inner{max-width:1100px;margin:0 auto}
+.footer-top{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:32px;margin-bottom:32px}
+.footer-brand{max-width:360px}
+.footer-brand img{height:40px;margin-bottom:12px}
+.footer-brand p{font-size:13px;color:#666;line-height:1.7}
+.footer-links{display:flex;gap:48px;flex-wrap:wrap}
+.footer-col h4{font-size:12px;font-weight:700;text-transform:uppercase;color:#333;margin-bottom:12px;font-family:'Oswald',sans-serif}
+.footer-col ul{list-style:none}
+.footer-col li{margin-bottom:6px}
+.footer-col a{font-size:13px;color:#666;transition:color .2s}
+.footer-col a:hover{color:#c8102e}
+.footer-bottom{border-top:1px solid #eee;padding-top:20px;font-size:12px;color:#999;text-align:center}
+
+/* === WELCOME BANNER === */
+.gw-banner{display:none;position:fixed;top:0;left:0;right:0;z-index:9999;background:linear-gradient(90deg,#1a3a5c,#c8102e);color:#fff;padding:10px 24px;font-size:14px;font-weight:500;justify-content:space-between;align-items:center;box-shadow:0 2px 12px rgba(0,0,0,.3)}
+.gw-banner button{background:rgba(255,255,255,.2);border:1px solid rgba(255,255,255,.4);color:#fff;padding:4px 14px;border-radius:20px;cursor:pointer;font-size:12px}
+
+/* === RESPONSIVE === */
+@media(max-width:768px){
+  .gw-nav-links{display:none}
+  .gw-nav-hamburger{display:block}
+  .gw-hero h1{font-size:28px}
+  .gw-hero h3{font-size:16px}
+  .brand-grid{grid-template-columns:1fr}
+  .stats-card{flex-direction:column;padding:24px}
+  .gw-cta{flex-direction:column;text-align:center}
+  .gw-testimonial .inner{flex-direction:column}
+  .footer-top{flex-direction:column}
+}
+</style>
+</head>
+<body>
+
+<!-- WELCOME BANNER -->
+<div class="gw-banner" id="gw-banner">
+  <span id="gw-banner-text">👋 Welcome! We've tailored this page for you.</span>
+  <button onclick="document.getElementById('gw-banner').style.display='none';document.body.style.paddingTop='0'">✕ Close</button>
+</div>
+
+<!-- NAV -->
+<nav class="gw-nav">
+  <a class="gw-nav-logo" href="#">
+    <img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/GW_white_logo.png" alt="Gardner Business Media"/>
+  </a>
+  <div class="gw-nav-links">
+    <a href="#">Brands</a>
+    <a href="#">Events</a>
+    <a href="#">Products &amp; Services</a>
+    <a href="#">Manufacturing Insights</a>
+    <a href="#">About Us</a>
+    <a href="#">Ad Specs &amp; Info</a>
+  </div>
+  <div class="gw-nav-hamburger">☰</div>
+</nav>
+
+<!-- HERO -->
+<section class="gw-hero">
+  <img class="gw-hero-bg" src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/gweb_home_hero_videofpo.jpg;maxWidth=1920" alt="Manufacturing workshop"/>
+  <div class="gw-hero-content">
+    <h1 id="gw-hero-h1">We provide media solutions to industrial manufacturing markets</h1>
+    <h3 id="gw-hero-h3">We Help You Build Brand + Increase Business</h3>
+    <a href="#contact" class="btn-white">Learn More</a>
+  </div>
+</section>
+
+<!-- DIVIDER -->
+<div class="gw-divider"></div>
+
+<!-- BRANDS -->
+<section class="gw-brands">
+  <h2 id="gw-brands-h2">Our brands are built to build your business.</h2>
+  <p>Our editorial, marketing and sales leaders work to create the best environment for your sales and marketing messages</p>
+  <div class="brand-grid">
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/mms_logo.png;maxWidth=200" alt="Modern Machine Shop"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_mms_image-ro.jpg;width=320" alt=""/></div></a>
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/pt_logo_dark.png;maxWidth=200" alt="Plastics Technology"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_pt_image-ro.jpg;width=320" alt=""/></div></a>
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/pmlogo.png;maxWidth=200" alt="Production Machining"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_pm_image-ro.jpg;width=320" alt=""/></div></a>
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/am_logo_stacked.png;maxWidth=200" alt="Additive Manufacturing"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_am_image-ro.jpg;width=320" alt=""/></div></a>
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/mmt_logo_dark.jpg;maxWidth=200" alt="MoldMaking Technology"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_mmt_image-ro.jpg;width=320" alt=""/></div></a>
+    <a class="brand-card" href="#"><div class="brand-logo"><img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/cw_logo.png;maxWidth=200" alt="CompositesWorld"/></div><div class="brand-img"><img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/brands/gweb_home_cw_image-ro.jpg;width=320" alt=""/></div></a>
+  </div>
+</section>
+
+<!-- AUDIENCE -->
+<section class="gw-audience">
+  <h2 id="gw-aud-h2">An Audience of Influencers</h2>
+  <h3 id="gw-aud-h3">Reach manufacturing buying teams throughout the entire industrial purchasing process</h3>
+  <div class="stats-card">
+    <div class="stat-item"><div class="stat-icon">📖</div><div class="stat-num">350,000</div><div class="stat-label">Qualified Print Subscribers</div></div>
+    <div class="stat-item"><div class="stat-icon">💻</div><div class="stat-num">25,000,000</div><div class="stat-label">Unique Website Visits</div></div>
+    <div class="stat-item"><div class="stat-icon">📧</div><div class="stat-num">425,000</div><div class="stat-label">Email Subscribers</div></div>
+    <div class="stat-item"><div class="stat-icon">🤝</div><div class="stat-num">150,000</div><div class="stat-label">Event Registrants</div></div>
+    <div class="stat-item"><div class="stat-icon">💬</div><div class="stat-num">120,000</div><div class="stat-label">Social Followers</div></div>
+  </div>
+  <a href="#contact" class="btn-teal">Learn More</a>
+</section>
+
+<!-- SOLUTIONS -->
+<section class="gw-solutions">
+  <h2>Media &amp; Marketing Solutions</h2>
+  <p>Proven avenues in today's economic landscape to drive sales, make lasting connections and expand your business</p>
+  <div class="solutions-grid">
+    <div class="sol-item"><div class="sol-icon">📰</div><div class="sol-label">Print</div></div>
+    <div class="sol-item"><div class="sol-icon">🌐</div><div class="sol-label">Web</div></div>
+    <div class="sol-item"><div class="sol-icon">✉️</div><div class="sol-label">Enewsletters</div></div>
+    <div class="sol-item"><div class="sol-icon">🎪</div><div class="sol-label">Events</div></div>
+    <div class="sol-item"><div class="sol-icon">📚</div><div class="sol-label">Content Collections</div></div>
+    <div class="sol-item"><div class="sol-icon">🎥</div><div class="sol-label">Webinars</div></div>
+    <div class="sol-item"><div class="sol-icon">🎯</div><div class="sol-label">Retargeting</div></div>
+    <div class="sol-item"><div class="sol-icon">📢</div><div class="sol-label">Native Advertising</div></div>
+    <div class="sol-item"><div class="sol-icon">⭐</div><div class="sol-label">Brand Solutions</div></div>
+    <div class="sol-item"><div class="sol-icon">📊</div><div class="sol-label">Intelligence Analytics</div></div>
+    <div class="sol-item"><div class="sol-icon">✏️</div><div class="sol-label">Custom Content</div></div>
+    <div class="sol-item"><div class="sol-icon">🔗</div><div class="sol-label">Lead Gen</div></div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="gw-newsletter">
+  <h2 id="gw-news-h2">Manufacturing Marketer Newsletter</h2>
+  <p>Key news and information delivered directly to your inbox!</p>
+  <a href="#" class="btn-primary-gw">Subscribe Now</a>
+</section>
+
+<!-- CTA -->
+<section class="gw-cta" id="contact">
+  <h2 id="gw-cta-h2">Let's Talk!</h2>
+  <div class="gw-cta-right">
+    <h3 id="gw-cta-h3">Design your custom media and marketing program</h3>
+    <a href="#" class="btn-outline-w">Contact Us</a>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<section class="gw-testimonial">
+  <div class="inner">
+    <blockquote>
+      "Gardner has been an outstanding strategic partner of Royal Products for over 50 years. Between their very knowledgeable team, wide range of marketing vehicles, and consultative (never pushy) approach, Gardner has been instrumental not only in producing a steady flow of solid leads, but in elevating the Royal Products brand in the eyes of leading industry professionals."
+      <div class="author">— Tom Sheridan, President, Royal Products</div>
+    </blockquote>
+    <div class="photo">
+      <img src="https://d2n4wb9orp1vta.cloudfront.net/cms/brand/gw/site/Gweb_2021_HomePageQuote_TSheridan.png;maxWidth=400" alt="Tom Sheridan"/>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="gw-footer">
+  <div class="inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <img src="https://d2n4wb9orp1vta.cloudfront.net/logos/png/GW_logo.png" alt="Gardner Business Media"/>
+        <p>Gardner Business Media has been the premier publisher for the heart of manufacturing in North America since 1928 – providing one-of-a-kind, relevant information to the people who power plants, shops, and factories.</p>
+      </div>
+      <div class="footer-links">
+        <div class="footer-col">
+          <h4>Brands</h4>
+          <ul>
+            <li><a href="#">Modern Machine Shop</a></li>
+            <li><a href="#">Plastics Technology</a></li>
+            <li><a href="#">Production Machining</a></li>
+            <li><a href="#">Additive Manufacturing</a></li>
+            <li><a href="#">CompositesWorld</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Events</a></li>
+            <li><a href="#">Media Kits</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Resources</h4>
+          <ul>
+            <li><a href="#">Manufacturing Insights</a></li>
+            <li><a href="#">Gardner Intelligence</a></li>
+            <li><a href="#">Newsletter</a></li>
+            <li><a href="#">Ad Specs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">© 2026 Gardner Business Media, Inc. All rights reserved. 6915 Valley Ave., Cincinnati, OH 45244 | (513) 527-8800</div>
+  </div>
+</footer>
+
+<!-- PERSONALIZATION -->
+<script>
+(function(){
+  var p=new URLSearchParams(location.search);
+  var name=p.get('name')||'',company=p.get('company')||'',role=p.get('role')||'',industry=p.get('industry')||'';
+  if(!name&&!company&&!role&&!industry)return;
+  function s(id,h){var e=document.getElementById(id);if(e)e.innerHTML=h;}
+  function cap(v){return v?v.charAt(0).toUpperCase()+v.slice(1):'';}
+  var first=name?name.split(' ')[0]:'';
+  var ind=industry?cap(industry):'Manufacturing';
+  // Banner
+  var b=document.getElementById('gw-banner');
+  if(b){b.style.display='flex';document.body.style.paddingTop='48px';
+    var g=first?'👋 Hi '+first+'!':'👋 Welcome!';
+    var c=company?' We\'ve tailored this page for <strong>'+company+'</strong>.':' We\'ve tailored this page for you.';
+    document.getElementById('gw-banner-text').innerHTML=g+c+' See how Gardner can grow your brand in '+ind+'.';}
+  // Hero
+  if(company)s('gw-hero-h1','We provide media solutions to help <em>'+company+'</em> reach the manufacturing market');
+  if(role&&company)s('gw-hero-h3','The right channels for a '+role+' at '+company+' to Build Brand + Increase Business');
+  else if(company)s('gw-hero-h3','Helping '+company+' Build Brand + Increase Business');
+  // Brands
+  if(company)s('gw-brands-h2','Our brands are built to build <em>'+company+'\'s</em> business.');
+  // Audience
+  if(industry){s('gw-aud-h2','The '+ind+' Decision-Makers You Need to Reach');s('gw-aud-h3','Our audience includes the exact '+ind+' buying teams '+(company||'your brand')+' needs to influence');}
+  else if(company){s('gw-aud-h2','An Audience Built for '+company);s('gw-aud-h3','Reach the manufacturing buying teams that matter most to '+company);}
+  // CTA
+  if(first||company)s('gw-cta-h2','Let\'s Talk, '+(first||company)+'!');
+  if(company||role){var sub='Design a custom '+ind+' media program for ';sub+=(company&&role)?(role+' at '+company):(company||role);s('gw-cta-h3',sub);}
+  // Newsletter
+  if(ind!=='Manufacturing')s('gw-news-h2',ind+' Marketer Newsletter');
+})();
+</script>
+</body>
+</html>
